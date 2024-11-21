@@ -1,0 +1,480 @@
+/* Основні стилі */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Play", sans-serif;
+  background-color: #540009;
+  color: #f5d8d3;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Заголовки */
+h1 {
+  font-size: 2.5rem;
+  color: #f5d8d3;
+}
+
+/* Загальний стиль для секційних заголовків */
+section h2 {
+  position: relative;
+  font-family: "Playfair Display";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.2;
+  font-size: 2.5rem;
+  color: #540009;
+}
+
+/* Декоративна лінія */
+section h2::before,
+section h2::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Лінія на рівні тексту */
+  width: 40%; /* Довжина лінії */
+  height: 2px; /* Товщина лінії */
+  background-color: #462121; /* Колір лінії */
+}
+
+section h2::before {
+  left: 0; /* Початок лівої лінії */
+}
+
+section h2::after {
+  right: 0; /* Початок правої лінії */
+}
+
+/* Сховати лінії на мобільних пристроях */
+@media screen and (max-width: 768px) {
+  section h2::before,
+  section h2::after {
+    display: none;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  color: #540009;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #e9c89a;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+/* Header */
+.header-section {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.header__logo {
+  font-family: "Playfair Display SC";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.19;
+  letter-spacing: 0.04em;
+  color: #e4b2aa;
+  display: flex;
+  text-align: center;
+}
+
+.header-pages {
+  font-family: "Playfair Display SC";
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.19;
+  margin-top: 30px;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-family: "Playfair Display SC";
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1.19;
+    display: flex;
+    gap: 100px;
+    margin-top: 0px;
+  }
+}
+
+.header-page {
+  border-radius: 20px;
+  padding: 5px 5px;
+  color: #e4b2aa;
+  margin-top: 30px;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    border-radius: 20px;
+  padding: 5px 5px;
+  color: #e4b2aa;
+  }
+}
+
+.header-page:hover {
+  color: #540009;
+  background-color: #e4b2aa;
+}
+
+.contakts-list {
+  display: none;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  background: #540009;
+  display: block;
+  @media screen and (min-width: 768px) {
+    background: #540009;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    background: #540009;
+  }
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-img {
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 100px;
+    max-width: 400px;
+  }
+}
+
+.hero-title {
+  font-family: "Playfair Display";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.2;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #f5d8d3;
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.2;
+    margin-top: 300px;
+    font-size: 2.5rem;
+    color: #f5d8d3;
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.hero-title-span {
+  color: #e6b881;
+}
+
+/* Анімації */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Для тексту */
+.fade-in-up {
+  animation: fadeInUp 1s ease-in-out forwards;
+  opacity: 0; /* Початковий стан */
+}
+
+/* Для фото */
+.slide-in-left {
+  animation: slideInLeft 1s ease-in-out forwards;
+  opacity: 0; /* Початковий стан */
+}
+
+/* About Section */
+.aboutMe-section {
+  padding: 50px 40px;
+  background-color: #e9c89a;
+  color: #3d0006;
+  text-align: center;
+}
+
+.aboutMe-title {
+  font-family: "Playfair Display SC";
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Tariffs Section */
+.tariffs-section {
+  padding: 50px 50px;
+  background-color: #e9c89a;
+  color: #540009;
+}
+
+.tariffs-title {
+  font-family: "Playfair Display SC";
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 0;
+  font-size: 2.3rem;
+}
+
+.tariffs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tariff {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  background-color: #540009;
+  color: #f5d8d3;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.tariff-list-title {
+  margin-bottom: 10px;
+  color: #fcb199;
+  font-family: "Play";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.tariff-list {
+  margin-bottom: 10px;
+  color: #ffd0c0;
+  font-family: "Play";
+  text-align: center;
+}
+
+.tariff:hover {
+  transform: translateY(-20px);
+}
+
+.students-section {
+  padding: 50px 120px;
+  background-color: #e9c89a;
+  color: #3d0006;
+  text-align: center;
+}
+
+.students-title {
+  font-family: "Playfair Display SC";
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 0;
+  font-size: 2.3rem;
+}
+
+/* Футер */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #540009;
+  color: #f5d8d3;
+}
+
+.footer-title {
+  font-family: "Playfair Display SC";
+  font-weight: 600;
+  color: #e9c89a;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.footer-contakts-list {
+  display: flex;
+  gap: 20px;
+}
+
+.contacts__svg {
+  width: 40px;
+  transition: transform 0.3s;
+}
+
+.contacts__svg:hover {
+  transform: scale(1.1);
+}
+
+/* Слайдер */
+.slider {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden; /* Прибирає горизонтальний скрол */
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  width: 300px;
+  height: auto;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex: 0 0 auto;
+    width: 450px;
+    height: auto;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+  }
+}
+
+.slider-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.slider-item:hover {
+  transform: scale(1);
+  z-index: 1;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.prev-btn {
+  left: -20px;
+}
+
+.next-btn {
+  right: -20px;
+}
+
+.slider-btn:hover {
+  background-color: #f0f0f0;
+}
